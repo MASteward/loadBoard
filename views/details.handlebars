@@ -1,0 +1,28 @@
+<section id="details">
+  <div class="load-details">
+    <div class="load-container">
+      <div class="details-btn-container">
+        <button class="back-btn" onclick="history.back()">&#11013; Back</button>
+        <button class="reserve-btn">Reserve</button>
+      </div>
+
+      <p><span>Trailer Requirement:</span> {{details.trailer}}</p>
+      <p><span>Load Material:</span> {{details.material}}</p>
+      {{#if details.license}}
+      <p><span>Special Licenses:</span> {{details.license}}</p>
+      {{/if}}
+      <p><span>Compensation:</span> ${{details.purse}}</p>
+      <p><span>Due By:</span> {{details.deadline}}</p>
+      {{#each details.Locations}}
+        {{#if pickup}}
+        <p><span>Pickup Location:</span> {{street}}, {{city}}, {{state}} {{zip}}</p>
+        {{else}}
+        <p><span>Dropoff Location:</span> {{street}}, {{city}}, {{state}} {{zip}}</p>
+        {{/if}}
+      {{/each}}
+      <p><span>Additional Info:</span></p>
+      <p class="instructions">{{details.instructions}}</p>
+
+    </div>
+  </div>
+</section>

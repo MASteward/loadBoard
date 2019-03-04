@@ -1,0 +1,42 @@
+<section id="add">
+  <div class="form-wrap">
+    <h1>Add A Load</h1>
+    {{#each errors}}
+      <div class="error">
+        <p>{{text}}</p>
+      </div>
+    {{/each}}
+    {{!-- <form class="add-form" action="/add" method="post">
+      <div class="form-section company-input">
+        <label for="company">Company</label>
+        <input type="text" name="company" placeholder="Company Name" value={{company}}>
+      </div>
+      <div class="form-section load_type-input">
+        <label for="load_type">Trailer Type</label>
+        <select class="form_selector" name="load_type">
+          <option value="reefer">Reefer</option>
+          <option value="flatbed">Flatbed</option>
+          <option value="tanker">Tanker</option>
+          <option value="Lowboy">Lowboy</option>
+        </select>
+      </div>
+      <div class="form-section pickup_location-input">
+        <label for="pickup_location">Pickup Location</label>
+        <input type="text" name="pickup_location" placeholder="Pickup Location" value={{pickup_location}}>
+      </div>
+      <div class="form-section dropoff_location-input">
+        <label for="dropoff_location">Dropoff Location</label>
+        <input type="text" name="dropoff_location" placeholder="Dropoff Location" value={{dropoff_location}}>
+      </div>
+      <div class="form-section purse-input">
+        <label for="purse">Payment Amount</label>
+        <input type="number" name="purse" placeholder="USD" value={{purse}}>
+      </div>
+      <div class="form-section deadline-input">
+        <label for="deadline">Deliver By</label>
+        <input type="date" name="deadline" value={{deadline}}>
+      </div>
+      <input type="submit" value="Add Load" class="load-submit-button">
+    </form> --}}
+  </div>
+</section>

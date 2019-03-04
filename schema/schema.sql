@@ -1,0 +1,16 @@
+-- DROP DATABASE IF EXISTS loadboard_db;
+-- CREATE DATABASE loadboard_db;
+-- USE loadboard_db;
+--
+--
+-- CREATE TABLE loads (
+--   id INT NOT NULL AUTO_INCREMENT,
+--   company VARCHAR(255) NOT NULL,
+--   load_type VARCHAR(255) NOT NULL,
+--   pickup_location VARCHAR(255) NOT NULL,
+--   dropoff_location VARCHAR(255) NOT NULL,
+--   purse FLOAT(11,2) NOT NULL,
+--   deadline DATETIME NOT NULL,
+--   created_at DATETIME NOT NULL,
+--   PRIMARY KEY (id)
+-- );

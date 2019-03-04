@@ -1,0 +1,38 @@
+<section id="loads">
+  <h1 class="page-title">All Loads</h1>
+  {{> filterbar}}
+  <div class="all_loads">
+    {{#each loads}}
+    <div class="load">
+      <div class="load_left">
+        <p><span>Trailer Requirement:</span> {{trailer}}</p>
+        <p><span>Load Material:</span> {{material}}</p>
+        {{#if license}}
+        <p><span>Special Licenses:</span> {{license}}</p>
+        {{/if}}
+        <p><span>Due By:</span> {{deadline}}</p>
+        <p><span>Compensation:</span> ${{purse}}</p>
+      </div>
+      <div class="load_right">
+        {{#each Locations}}
+          {{#if pickup}}
+          <p><span>Pickup Location:</span></p>
+          <div>{{street}}, {{city}}, {{state}} {{zip}}</div>
+          {{else}}
+          <p><span>Dropoff Location:</span></p>
+          <div>{{street}}, {{city}}, {{state}} {{zip}}</div>
+          {{/if}}
+        {{/each}}
+      </div>
+
+
+      <form action="/details/{{id}}" method="get">
+        <input type="submit" value="View More" class="load-submit-btn">
+      </form>
+    </div>
+    {{else}}
+      <p>No Load Available</p>
+    {{/each}}
+  </div>
+
+</section>
