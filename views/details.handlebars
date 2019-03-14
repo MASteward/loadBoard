@@ -1,28 +1,41 @@
 <section id="details">
-  <div class="load-details">
-    <div class="load-container">
-      <div class="details-btn-container">
-        <button class="back-btn" onclick="history.back()">&#11013; Back</button>
-        <button class="reserve-btn">Reserve</button>
+  <div class="details__container">
+    <div class="details__btn-container">
+      <button class="back-btn" onclick="history.back()">&#11013; Back</button>
+    </div>
+    <div class="details__load">
+      <div>
+        <p><span>Trailer Requirement:</span> {{details.trailer}}</p>
       </div>
-
-      <p><span>Trailer Requirement:</span> {{details.trailer}}</p>
-      <p><span>Load Material:</span> {{details.material}}</p>
+      <div>
+        <p><span>Load Material:</span> {{details.material}}</p>
+      </div>
       {{#if details.license}}
-      <p><span>Special Licenses:</span> {{details.license}}</p>
+      <div>
+        <p><span>Special Licenses:</span> {{details.license}}</p>
+      </div>
       {{/if}}
-      <p><span>Compensation:</span> ${{details.purse}}</p>
-      <p><span>Due By:</span> {{details.deadline}}</p>
+      <div>
+        <p><span>Compensation:</span> ${{details.purse}}</p>
+      </div>
+      <div>
+        <p><span>Due By:</span> {{details.deadline}}</p>
+      </div>
       {{#each details.Locations}}
         {{#if pickup}}
-        <p><span>Pickup Location:</span> {{street}}, {{city}}, {{state}} {{zip}}</p>
+        <div class="details__load-address">
+          <span>Pickup Location: </span><p>{{street}}, {{city}}, {{state}} {{zip}}</p>
+        </div>
         {{else}}
-        <p><span>Dropoff Location:</span> {{street}}, {{city}}, {{state}} {{zip}}</p>
+        <div class="details__load-address">
+          <span>Dropoff Location: </span><p>{{street}}, {{city}}, {{state}} {{zip}}</p>
+        </div>
         {{/if}}
       {{/each}}
-      <p><span>Additional Info:</span></p>
-      <p class="instructions">{{details.instructions}}</p>
-
+      <div>
+        <span>Additional Info:</span>
+        <p class="instructions">{{details.instructions}}</p>
+      </div>
     </div>
   </div>
 </section>

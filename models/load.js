@@ -26,10 +26,6 @@ module.exports = (sequelize, DataTypes) => {
         len: [0, 500]
       }
     },
-    available: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false
-    },
     deadline: {
       type: DataTypes.DATEONLY,
       allowNull: false
@@ -37,11 +33,11 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   Load.associate = function(models) {
-    Load.belongsTo(models.Company, {
+    Load.belongsTo(models.User, {
       foreignKey: {
-        allowNull: false
+        allowNull: true
       }
-    });
+    })
 
     Load.hasMany(models.Location, {
       onDelete: "cascade"

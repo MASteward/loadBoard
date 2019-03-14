@@ -1,0 +1,36 @@
+<section id="new-account">
+  <div class="page-title">
+    <h1>New Account</h1>
+  </div>
+  <div class="form-wrap">
+
+    {{!-- <form class="new-account-form" action="/user/new" method='POST'> --}}
+    <form class="new-account-form" name="new-user-form" id="new-user-form">
+
+      <fieldset>
+        <div class="form-section user_first-name">
+          <label for="first_name">First Name:</label>
+          <input type="text" name="first_name" id="firstName" placeholder="First Name" value={{first_name}}>
+        </div>
+        <div class="form-section user_last-name">
+          <label for="last_name">Last Name:</label>
+          <input type="text" name="last_name" id="lastName" placeholder="Last Name" value={{last_name}}>
+        </div>
+        <div class="form-section user_email">
+          <label for="email">Email:</label>
+          <input id="userEmail" type="email" name="email" placeholder="Email" value={{email}}>
+        </div>
+        <div class="form-section user_password">
+          <label for="password">Password:</label>
+          <input id="userPass" type="password" name="password" placeholder="Password" value={{password}}>
+        </div>
+        <button type="submit" id="submit-new-user">Submit</button>
+      </fieldset>
+      <div class="account-image">
+        <img src="../images/truck_bw.png" alt="truck-logo">
+      </div>
+
+    </form>
+
+  </div>
+</section>

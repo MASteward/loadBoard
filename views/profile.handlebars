@@ -1,0 +1,35 @@
+<section id="profile">
+  <h1 class="page-title">Posted Freight</h1>
+  <div class="all_loads">
+    {{#each loads}}
+      <div class="collapsible-menu" id="menu{{@index}}">
+        <i class="im im-plus-circle"></i>
+        <p>{{trailer}}</p>
+        {{#each Locations}}
+          {{#unless pickup}}
+            <p>{{city}}, {{state}}</p>
+          {{/unless}}
+        {{/each}}
+      </div>
+      <div class="profile-load">
+        <div class="profile-btn-container">
+          <form class="load-delete-button" action="/delete" method="POST">
+            <input type="hidden" name="id" value="{{id}}">
+            <input type="submit" name="submit" value="Delete">
+          </form>
+        </div>
+
+        {{>info-container}}
+
+        <div class="instructions">
+          <div>
+            <span>Additional Information:</span>
+            <p>{{instructions}}</p>
+          </div>
+        </div>
+      </div>
+    {{else}}
+      <p>No Load Available</p>
+    {{/each}}
+  </div>
+</section>

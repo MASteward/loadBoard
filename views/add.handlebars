@@ -6,37 +6,99 @@
         <p>{{text}}</p>
       </div>
     {{/each}}
-    {{!-- <form class="add-form" action="/add" method="post">
-      <div class="form-section company-input">
-        <label for="company">Company</label>
-        <input type="text" name="company" placeholder="Company Name" value={{company}}>
+    <form id="add-form" class="add-form" action="/add" method="POST">
+      <fieldset id="load-form_details">
+        <legend>Load Details</legend>
+        <div class="split-sections">
+          <div class="section-left">
+            <div class="load-section add-form_material">
+              <label for="material">Load Material:</label>
+              <input type="text" name="material" placeholder="e.g. 'Cement' or 'Machinery'" value="{{material}}" required>
+            </div>
+            <div class="load-section add-form_trailer">
+              <label for="trailer">Trailer Type:</label>
+              <select class="form_selector" name="trailer">
+                <option value="reefer">Reefer</option>
+                <option value="flatbed">Flatbed</option>
+                <option value="tanker">Tanker</option>
+                <option value="Lowboy">Lowboy</option>
+              </select>
+            </div>
+            <div class="load-section add-form_purse">
+              <label for="purse">Compensation:</label>
+              <input type="number" name="purse" placeholder="e.g. '1500' or '5000'" value="{{purse}}" step=".01" required>
+            </div>
+          </div>
+          <div class="section-right">
+            <div class="load-section add-form_license">
+              <label for="license">License Type:</label>
+              <input type="text" name="license" value="{{license}}">
+            </div>
+            <div class="load-section add-form_deadline">
+              <label for="deadline">Delivery Date:</label>
+              <input type="date" name="deadline" value="{{deadline}}" required>
+            </div>
+          </div>
+        </div>
+        <div class="load-section add-form_instructions">
+          <label  for="instructions">Additional Instructions:</label>
+          <textarea rows="8" name="instructions" value="{{instructions}}" placeholder="Optional"></textarea>
+        </div>
+
+      </fieldset>
+      <div class="locations-container">
+        <fieldset class="load-form_pickup">
+          <legend>Pickup Address</legend>
+          <div class="load-section pickup-street">
+            <label for="street">Street:</label>
+            <input type="text" name="street" value="{{street}}" placeholder="Street Address" required>
+          </div>
+          <div class="load-section pickup-city">
+            <label for="city">City:</label>
+            <input type="text" name="city" value="{{city}}" required>
+          </div>
+          <div class="load-section state state-zip">
+            <div class="pickup-state">
+              <label for="state">State:</label>
+              <input type="text" name="state" value="{{state}}" maxlength="2" required>
+            </div>
+            <div class="zip pickup-zip">
+              <label for="zip">Zip Code:</label>
+              <input type="text" name="zip" value="{{zip}}" maxlength="5" required>
+            </div>
+          </div>
+
+          <input type="hidden" name="pickup" value=true>
+        </fieldset>
+
+        <fieldset class="load-form_delivery">
+          <legend>Delivery Address</legend>
+          <div class="load-section delivery-street">
+            <label for="street">Street:</label>
+            <input type="text" name="street" value="{{street}}" placeholder="Street Address" required>
+          </div>
+          <div class="load-section delivery-city">
+            <label for="city">City:</label>
+            <input type="text" name="city" value="{{city}}" required>
+          </div>
+          <div class="load-section state state-zip">
+            <div class="delivery-state">
+              <label for="state">State:</label>
+              <input type="text" name="state" value="{{state}}" maxlength="2" required>
+            </div>
+            <div class="zip delivery-zip">
+              <label for="zip">Zip Code:</label>
+              <input type="text" name="zip" value="{{zip}}" maxlength="5" required>
+            </div>
+          </div>
+
+          <input type="hidden" name="pickup" value=false>
+        </fieldset>
       </div>
-      <div class="form-section load_type-input">
-        <label for="load_type">Trailer Type</label>
-        <select class="form_selector" name="load_type">
-          <option value="reefer">Reefer</option>
-          <option value="flatbed">Flatbed</option>
-          <option value="tanker">Tanker</option>
-          <option value="Lowboy">Lowboy</option>
-        </select>
-      </div>
-      <div class="form-section pickup_location-input">
-        <label for="pickup_location">Pickup Location</label>
-        <input type="text" name="pickup_location" placeholder="Pickup Location" value={{pickup_location}}>
-      </div>
-      <div class="form-section dropoff_location-input">
-        <label for="dropoff_location">Dropoff Location</label>
-        <input type="text" name="dropoff_location" placeholder="Dropoff Location" value={{dropoff_location}}>
-      </div>
-      <div class="form-section purse-input">
-        <label for="purse">Payment Amount</label>
-        <input type="number" name="purse" placeholder="USD" value={{purse}}>
-      </div>
-      <div class="form-section deadline-input">
-        <label for="deadline">Deliver By</label>
-        <input type="date" name="deadline" value={{deadline}}>
-      </div>
-      <input type="submit" value="Add Load" class="load-submit-button">
-    </form> --}}
+      <button type="submit" name="button">Submit</button>
+    </form>
   </div>
+
+
+</div>
 </section>
