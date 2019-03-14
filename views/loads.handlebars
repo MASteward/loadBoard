@@ -1,57 +1,31 @@
 <section id="all-loads">
+
   <h1 class="page-title">All Loads</h1>
+
   {{> filterbar}}
+
   <div class="all-loads_container">
+
     {{#each loads}}
 
       <div class="load">
-        {{>info-container}}
-        {{!-- <div class="load_left">
-          <div>
-            <p><span>Trailer Requirement:</span> {{trailer}}</p>
-          </div>
-          <div>
-            <p><span>Load Material:</span> {{material}}</p>
-          </div>
-          {{#if license}}
-            <div>
-              <p><span>Special Licenses:</span> {{license}}</p>
-            </div>
-          {{/if}}
-          <div>
-            <p><span>Due Date:</span> {{deadline}}</p>
-          </div>
-          <div>
-            <p><span>Compensation:</span> <span class="monetary-sign">$</span>{{purse}}</p>
-          </div>
-        </div>
-        <div class="load_right">
-          {{#each Locations}}
-            {{#if pickup}}
-              <div>
-                <p><span>Pickup Location:</span></p>
-              </div>
-              <div>
-                <p>{{street}}, {{city}}, {{state}} {{zip}}</p>
-              </div>
-            {{else}}
-              <div>
-                <p><span>Dropoff Location:</span></p>
-              </div>
-              <div>
-                <p>{{street}}, {{city}}, {{state}} {{zip}}</p>
-              </div>
-            {{/if}}
-          {{/each}}
-        </div> --}}
+        <div class="information-container">
 
-        <form class="all-loads_form" action="/details/{{id}}" method="get">
-          <input type="submit" value="View More" class="load-submit-btn">
-        </form>
+          {{>info-container}}
+
+          <form class="all-loads_form" action="/details/{{id}}" method="get">
+            <input type="submit" value="View More" class="load-submit-btn">
+          </form>
+
+        </div>
       </div>
+
     {{else}}
+
       <p>No Load Available</p>
+
     {{/each}}
+
   </div>
 
 </section>

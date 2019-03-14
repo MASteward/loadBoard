@@ -4,38 +4,45 @@
       <button class="back-btn" onclick="history.back()">&#11013; Back</button>
     </div>
     <div class="details__load">
-      <div>
-        <p><span>Trailer Requirement:</span> {{details.trailer}}</p>
-      </div>
-      <div>
-        <p><span>Load Material:</span> {{details.material}}</p>
-      </div>
-      {{#if details.license}}
-      <div>
-        <p><span>Special Licenses:</span> {{details.license}}</p>
-      </div>
-      {{/if}}
-      <div>
-        <p><span>Compensation:</span> ${{details.purse}}</p>
-      </div>
-      <div>
-        <p><span>Due By:</span> {{details.deadline}}</p>
-      </div>
-      {{#each details.Locations}}
-        {{#if pickup}}
-        <div class="details__load-address">
-          <span>Pickup Location: </span><p>{{street}}, {{city}}, {{state}} {{zip}}</p>
+      <div class="information-container">
+        <div>
+          <p><span>Trailer Requirement:</span> {{details.trailer}}</p>
         </div>
-        {{else}}
-        <div class="details__load-address">
-          <span>Dropoff Location: </span><p>{{street}}, {{city}}, {{state}} {{zip}}</p>
+        <div>
+          <p><span>Load Material:</span> {{details.material}}</p>
+        </div>
+        {{#if details.license}}
+        <div>
+          <p><span>Special Licenses:</span> {{details.license}}</p>
         </div>
         {{/if}}
-      {{/each}}
-      <div>
-        <span>Additional Info:</span>
-        <p class="instructions">{{details.instructions}}</p>
+        <div>
+          <p><span>Compensation:</span> <span class="monetary-sign">$</span>{{details.purse}}</p>
+        </div>
+        <div>
+          <p><span>Due By:</span> {{details.deadline}}</p>
+        </div>
+        {{#each details.Locations}}
+          {{#if pickup}}
+          <div class="details__load-address address">
+            <span>Pickup Location: </span><p>{{street}}, {{city}}, {{state}} {{zip}}</p>
+          </div>
+          {{else}}
+          <div class="details__load-address address">
+            <span>Dropoff Location: </span><p>{{street}}, {{city}}, {{state}} {{zip}}</p>
+          </div>
+          {{/if}}
+        {{/each}}
+        <div>
+          <span>Additional Info:</span>
+          {{#if details.instructions}}
+            <p class="instructions">{{details.instructions}}</p>
+          {{else}}
+            <p class="instructions">None</p>
+          {{/if}}
+        </div>
       </div>
     </div>
+
   </div>
 </section>
