@@ -850,6 +850,11 @@ div.load-section {
     color: var(--color-accent-gold);
   }
 
+  .masthead ul li:hover {
+    color: var(--color-accent-gold);
+    cursor: pointer;
+  }
+
   #loginItem {
     position: relative;
   }
