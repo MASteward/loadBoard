@@ -576,6 +576,10 @@ div.load-section {
   padding-left: 0;
 }
 
+.back-btn-img {
+  height: 1.5rem;
+}
+
 .back-btn:focus {
   outline: none;
 }
