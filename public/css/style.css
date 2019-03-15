@@ -641,7 +641,7 @@ div.load-section {
 #new-account .form-wrap {
   /* width: 60rem; */
   margin: 0 auto;
-  padding: 2.5rem;
+  padding: 1.5rem;
   background-color: var(--color-dark-grey);
   color: var(--color-accent-gold);
   text-shadow: var(--shadow-text);
@@ -657,20 +657,27 @@ div.load-section {
 }
 
 .account-image {
-  width: 25rem;
-  margin: 0 auto 2rem;
+  width: 30rem;
+  margin: 0 auto;
 }
 
 .account-image img {
   width: 100%;
 }
 
-.new-account-form fieldset {
-  width: 100%;
+.new-account-form fieldset > div {
+  margin-bottom: 1rem;
 }
 
-.new-account-form fieldset > div:not(:last-child) {
-  margin-bottom: 1rem;
+.new-account-form fieldset {
+  border: 2px solid #fff;
+  padding: 0 1.5rem 1.5rem;
+}
+
+.new-account-form legend {
+  font-size: 4rem;
+  color: var(--color-accent-blue);
+  padding: 0 .5rem;
 }
 
 .form-section > label {
