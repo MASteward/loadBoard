@@ -192,7 +192,7 @@ input[type=password] {
 
 #nav-list > li > a,
 #nav-list > li > label {
-  padding: 0 .5rem;
+  /* padding: 0 .5rem; */
 }
 
 .nav-checkbox:checked ~ .nav-list-container {
@@ -639,12 +639,8 @@ div.load-section {
 }
 
 #new-account .form-wrap {
-  width: 60rem;
+  /* width: 60rem; */
   margin: 0 auto;
-}
-
-.new-account-form {
-  text-align: left;
   padding: 2.5rem;
   background-color: var(--color-dark-grey);
   color: var(--color-accent-gold);
@@ -652,12 +648,17 @@ div.load-section {
   box-shadow: var(--shadow-box);
   border: 2px solid var(--color-accent-blue);
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+}
+
+.new-account-form {
+  text-align: left;
+  /* width: 100%; */
 }
 
 .account-image {
-  width: 50%;
-  padding-left: 2.5rem;
+  width: 25rem;
+  margin: 0 auto 2rem;
 }
 
 .account-image img {
@@ -665,11 +666,11 @@ div.load-section {
 }
 
 .new-account-form fieldset {
-  width: 50%;
+  width: 100%;
 }
 
-.new-account-form fieldset > div:not(:first-child) {
-  margin-top: 1rem;
+.new-account-form fieldset > div:not(:last-child) {
+  margin-bottom: 1rem;
 }
 
 .form-section > label {
@@ -692,6 +693,7 @@ div.load-section {
   font-weight: bold;
   border: 2px solid;
   outline: none;
+  float:right;
 }
 
 
@@ -1160,6 +1162,8 @@ div.load-section {
 
 
 
+
+
   /* ADD LOAD PAGE */
   #add {
     background-color: var(--color-dark-grey);
@@ -1329,6 +1333,87 @@ div.load-section {
     font-weight: bold;
     color: var(--color-accent-gold);
     text-shadow: var(--shadow-text);
+  }
+
+
+  /* SIGNUP PAGE */
+  #new-account {
+    text-align: center;
+    width: 100%;
+  }
+
+  .page-title {
+    text-shadow: var(--shadow-text);
+  }
+
+  #new-account .form-wrap {
+    padding: 2.5rem;
+    background-color: var(--color-dark-grey);
+    color: var(--color-accent-gold);
+    text-shadow: var(--shadow-text);
+    box-shadow: var(--shadow-box);
+    border: 2px solid var(--color-accent-blue);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    width: 70%;
+  }
+
+  .new-account-form {
+    text-align: left;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .account-image {
+    width: 45%;
+    margin: 0 auto;
+    padding-left: 2.5rem;
+  }
+
+  .account-image img {
+    width: 100%;
+  }
+
+  .new-account-form fieldset {
+    border: 2px solid #fff;
+    padding: 0 1.5rem 1.5rem;
+  }
+
+  .new-account-form legend {
+    font-size: 4rem;
+    color: var(--color-accent-blue);
+    padding: 0 .5rem;
+  }
+
+  /* .new-account-form fieldset > div.form-selection:first-child {
+    margin-top: 0;
+  } */
+
+  .form-section > label {
+    display: block;
+    padding-right: 1rem;
+  }
+
+  .form-section > input {
+    padding: .5rem;
+    font-size: 1.6rem;
+    width: 100%;
+  }
+
+  #submit-new-user {
+    padding: 1rem 1.5rem;
+    background-color: transparent;
+    color: var(--color-accent-gold);
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    font-weight: bold;
+    border: 2px solid;
+    outline: none;
+    width: 15rem;
+    align-self: flex-end;
   }
 
 

@@ -5,9 +5,12 @@
   <div class="form-wrap">
 
     {{!-- <form class="new-account-form" action="/user/new" method='POST'> --}}
+    <div class="account-image">
+      <img src="../images/truck_bw.png" alt="truck-logo">
+    </div>
     <form class="new-account-form" name="new-user-form" id="new-user-form">
-
       <fieldset>
+        <legend>Sign Up</legend>
         <div class="form-section user_first-name">
           <label for="first_name">First Name:</label>
           <input type="text" name="first_name" id="firstName" placeholder="First Name" value={{first_name}}>
@@ -24,12 +27,8 @@
           <label for="password">Password:</label>
           <input id="userPass" type="password" name="password" placeholder="Password" value={{password}}>
         </div>
-        <button type="submit" id="submit-new-user">Submit</button>
       </fieldset>
-      <div class="account-image">
-        <img src="../images/truck_bw.png" alt="truck-logo">
-      </div>
-
+      <button type="submit" id="submit-new-user">Submit</button>
     </form>
 
   </div>
