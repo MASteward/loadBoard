@@ -1,4 +1,4 @@
-<section id="details">
+<section id="details" class="page-container">
   <div class="details__container">
     <div class="details__btn-container">
       <button class="back-btn" onclick="history.back()"><img class="back-btn-img" src="../images/left_arrow-shadow.jpg" alt="back-arrow"> Back</button>
@@ -25,11 +25,11 @@
         {{#each details.Locations}}
           {{#if pickup}}
           <div class="details__load-address address">
-            <span>Pickup Location: </span><p>{{street}}, {{city}}, {{state}} {{zip}}</p>
+            <span>Pickup Location:&nbsp;</span><div><p>{{street}}</p> <p>{{city}}, {{state}} {{zip}}</p></div>
           </div>
           {{else}}
           <div class="details__load-address address">
-            <span>Dropoff Location: </span><p>{{street}}, {{city}}, {{state}} {{zip}}</p>
+            <span>Dropoff Location:&nbsp;</span><div><p>{{street}}</p> <p>{{city}}, {{state}} {{zip}}</p></div>
           </div>
           {{/if}}
         {{/each}}

@@ -1,4 +1,4 @@
-<section id="profile">
+<section id="profile" class="page-container">
   <h1 class="page-title">Posted Freight</h1>
   <div class="all_loads">
     {{#each loads}}
@@ -13,12 +13,14 @@
       </div>
       <div class="profile-load">
         {{!-- <div class="profile-btn-container"> --}}
+
+        {{!-- </div> --}}
+        <div class="information-container">
+
           <form class="profile_delete-load" action="/delete" method="POST">
             <input type="hidden" name="id" value="{{id}}">
             <input class="delete-btn" type="submit" name="submit" value="Delete">
           </form>
-        {{!-- </div> --}}
-        <div class="information-container">
 
           {{>info-container}}
 

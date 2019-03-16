@@ -81,8 +81,8 @@ module.exports = function(app) {
   app.get('/search', (req, res, next) => {
     userStatus = req.user;
     let { term, category } = req.query;
-    if (term == "") {
-      res.redirect('/loads', userStatus);
+    if (!term) {
+      res.redirect('/loads');
     } else {
       let locationIds;
       if (category == "material" || category == "trailer") {

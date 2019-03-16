@@ -19,11 +19,11 @@
 {{#each Locations}}
   {{#if pickup}}
     <div class="address">
-      <span>Pickup Location: </span><p>{{street}}, {{city}}, {{state}} {{zip}}</p>
+      <span>Pickup Location:&nbsp;</span><div><p>{{street}}</p> <p>{{city}}, {{state}} {{zip}}</p></div>
     </div>
   {{else}}
     <div class="address">
-      <span>Dropoff Location: </span><p>{{street}}, {{city}}, {{state}} {{zip}}</p>
+      <span>Dropoff Location:&nbsp;</span><div><p>{{street}}</p> <p>{{city}}, {{state}} {{zip}}</p></div>
     </div>
   {{/if}}
 {{/each}}
