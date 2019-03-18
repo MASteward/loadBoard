@@ -44,7 +44,9 @@ a:active {
   cursor: pointer;
 }
 
-
+h2 {
+  font-size: 3rem;
+}
 
 h3 {
   font-size: 2rem;
@@ -222,6 +224,11 @@ input[type=password] {
   display: flex;
 }
 
+.no-loads {
+  color:#fff;
+  text-shadow: var(--shadow-text);
+  margin-top: 5rem;
+}
 
 
 
@@ -674,6 +681,11 @@ div.load-section {
   box-shadow: none;
 }
 
+.all_loads > p {
+  color: #fff;
+  text-shadow: var(--shadow-text);
+}
+
 /* #profile .load-menu {
   box-shadow: var(--shadow-box);
 } */
@@ -1054,6 +1066,10 @@ div.load-section {
 
   #profile .all_loads {
     width: 80%;
+  }
+
+  .collapsible-menu:hover {
+    cursor: pointer;
   }
 
 

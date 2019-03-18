@@ -1,7 +1,11 @@
 <section id="profile" class="page-container">
   <h1 class="page-title">Posted Freight</h1>
   <div class="all_loads">
+    {{#if loads}}
+      <p>Click on a load to see more details</p>
+    {{/if}}
     {{#each loads}}
+
       <div class="collapsible-menu" id="menu{{@index}}">
         <i class="im im-plus-circle"></i>
         <p>{{trailer}}</p>
@@ -36,7 +40,7 @@
 
       </div>
     {{else}}
-      <p>No Load Available</p>
+      <h2 class="no-loads">You do not have any loads posted.</h2>
     {{/each}}
   </div>
 </section>
